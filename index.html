@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,6 +7,7 @@
 <title>Content Cafe</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -13,9 +15,9 @@
 }
 
 body{
+    background:#000000;
+    color:#FFFFFF;
     font-family:Arial,sans-serif;
-    background:#000;
-    color:#fff;
     min-height:100vh;
     display:flex;
     justify-content:center;
@@ -31,9 +33,9 @@ body{
 
 .brand-row{
     display:flex;
-    align-items:center;
     justify-content:center;
-    gap:36px;
+    align-items:center;
+    gap:12px;
     margin-bottom:20px;
 }
 
@@ -50,14 +52,15 @@ body{
 }
 
 .contentrush{
-    font-size:22px;
     color:#D4AF37;
+    font-size:22px;
     font-weight:700;
     margin-bottom:15px;
 }
 
 .status{
     font-size:24px;
+    font-weight:700;
     margin-bottom:15px;
 }
 
@@ -65,52 +68,56 @@ body{
     font-size:16px;
     line-height:1.6;
 }
+
 </style>
 
 </head>
-
 <body>
 
 <div class="container">
 
-<img src="logo.png" class="logo">
+```
+<div class="brand-row">
+    <img src="logo.png" alt="Logo" class="logo">
+    <div class="cafe-name">Content Cafe</div>
+</div>
 
-<div class="brand">Content Cafe</div>
+<div id="expiredPage">
 
-<div id="content"></div>
+    <div class="contentrush">
+        ContentRush.AI
+    </div>
+
+    <div class="status">
+        Subscription Expired
+    </div>
+
+    <div class="message">
+        Please renew your subscription to access the digital menu.
+    </div>
+
+</div>
+```
 
 </div>
 
 <script>
 
-const subscription = false;
+/* =========================
+   SUBSCRIPTION CONTROL
+   ========================= */
 
-if(subscription){
+const subscriptionActive = false;
 
-window.location.href = "menu.html";
+/* true  = Open menu.html
+   false = Show expired page */
 
-}else{
-
-document.getElementById("content").innerHTML = `
-<div class="status">
-Your Session has expired. Please Subscribe to continue viewing Menu
-</div>
-
-<div style="
-margin-top:20px;
-font-size:22px;
-font-weight:700;
-color:#D4AF37;
-">
-Powered by ContentRush.AI
-</div>
-`;
-
+if(subscriptionActive){
+    window.location.replace("menu.html");
 }
 
 </script>
 
-
 </body>
 </html>
-</html>
+```
