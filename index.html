@@ -66,54 +66,51 @@ body{
     line-height:1.6;
 }
 </style>
+
 </head>
+
 <body>
 
 <div class="container">
 
- <div class="brand-row">
+<img src="logo.png" class="logo">
 
-    <img src="logo.png" alt="Logo" class="logo">
+<div class="brand">Content Cafe</div>
 
-    <div class="cafe-name">
-        Content Cafe
-    </div>
-
-</div>
-
-    <div class="contentrush">
-        ContentRush.AI
-    </div>
-
-    <div class="status">
-        Subscription Expired
-    </div>
-
-    <div class="message">
-        Please renew your subscription
-        to access the digital menu.
-    </div>
+<div id="content"></div>
 
 </div>
 
 <script>
 
-/* ==========================
-   SUBSCRIPTION CONTROL
-========================== */
+const subscription = false;
 
-const subscriptionActive = true;
+if(subscription){
 
-/* true  = Open Menu
-   false = Show Expired Page */
+window.location.href = "menu.html";
 
-if(subscriptionActive){
+}else{
 
-    window.location.href = "menu.html";
+document.getElementById("content").innerHTML = `
+<div class="status">
+Your Session has expired. Please Subscribe to continue viewing Menu
+</div>
+
+<div style="
+margin-top:20px;
+font-size:22px;
+font-weight:700;
+color:#00BFFF;
+">
+Powered by ContentRush.AI
+</div>
+`;
 
 }
 
 </script>
 
+
 </body>
+</html>
 </html>
