@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Cafe - Soup</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    padding:15px;
+}
+
+.brand-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.logo{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.cafe-name{
+    font-size:36px;
+    font-weight:700;
+    color:#D4AF37;
+}
+
+.category-title{
+    text-align:center;
+    font-size:26px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#111;
+    border:1px solid #D4AF37;
+}
+
+th{
+    font-size:20px;
+    padding:10px 5px;
+    color:#D4AF37;
+    border-bottom:1px solid #D4AF37;
+    text-align:center;
+}
+
+td{
+    font-size:18px;
+    padding:10px 5px;
+    border-bottom:1px solid #333;
+    text-align:center;
+}
+
+td:first-child{
+    text-align:left;
+    font-weight:600;
+}
+
+.view-btn{
+    display:inline-block;
+    text-decoration:none;
+    font-size:18px;
+    padding:4px 10px;
+    border-radius:4px;
+    background:#D4AF37;
+    color:#000;
+    font-weight:700;
+}
+</style>
+
+</head>
+<body>
+
+<div class="brand-row">
+    <img src="logo.png" alt="Logo" class="logo">
+    <div class="cafe-name">Content Cafe</div>
+</div>
+
+<div class="category-title">
+    Soup
+</div>
+
+<table>
+
+<thead>
+<tr>
+    <th>Item Name</th>
+    <th>Price</th>
+    <th>3D</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+    <td>Tomato Soup</td>
+    <td>₹90</td>
+    <td><a href="tomato-soup.html" class="view-btn">View</a></td>
+</tr>
+
+<tr>
+    <td>Sweet Corn Soup</td>
+    <td>₹90</td>
+    <td><a href="sweet-corn-soup.html" class="view-btn">View</a></td>
+</tr>
+
+<tr>
+    <td>Manchow Soup</td>
+    <td>₹90</td>
+    <td><a href="manchow-soup.html" class="view-btn">View</a></td>
+</tr>
+
+<tr>
+    <td>Veg Clear Soup</td>
+    <td>₹100</td>
+    <td><a href="veg-clear-soup.html" class="view-btn">View</a></td>
+</tr>
+
+</tbody>
+
+</table>
+
+</body>
+</html>
