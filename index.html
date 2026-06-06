@@ -2,6 +2,13 @@
 
 <html lang="en">
 <head>
+<script>
+const subscriptionActive = true;
+
+if(subscriptionActive){
+    window.location.replace("menu.html");
+}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Content Cafe</title>
@@ -17,6 +24,7 @@
 body{
     background:#000000;
     color:#FFFFFF;
+    display:none;
     font-family:Arial,sans-serif;
     min-height:100vh;
     display:flex;
@@ -102,20 +110,9 @@ body{
 </div>
 
 <script>
-
-/* =========================
-   SUBSCRIPTION CONTROL
-   ========================= */
-
-const subscriptionActive = true;
-
-/* true  = Open menu.html
-   false = Show expired page */
-
-if(subscriptionActive){
-    window.location.replace("menu.html");
+if(!subscriptionActive){
+    document.body.style.display = "flex";
 }
-
 </script>
 
 </body>
